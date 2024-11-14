@@ -37,6 +37,17 @@ window.addEventListener('resize', () => {
    containerPadding = window.getComputedStyle(document.querySelector('.container'), null).getPropertyValue('padding-left')
 })
 
+
+
+headermenu.querySelectorAll('a').forEach(i => {
+   i.addEventListener('click', () => {
+      burger.classList.remove('active');
+      document.querySelector('body').classList.remove('lock');
+      headermenu.style.top = '-100%';
+
+   })
+})
+
 if (document.querySelectorAll('slider')) {
    const sliders = document.querySelectorAll('.slider');
    sliders.forEach((i, index) => {
